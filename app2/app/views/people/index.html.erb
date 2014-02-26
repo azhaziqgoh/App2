@@ -1,0 +1,18 @@
+<h1>List of People</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Telephone</th>
+    <th>Group Name</th>
+  </tr>
+ 
+  <% @person.each do |people| %>
+    <tr>
+      <td><%= people.name %></td>
+      <td><%= people.address %></td>
+      <td><%= people.telephone %></td>
+      <td><%= people.group_id %></td>
+    </tr>
+  <% end %>
+</table>
