@@ -12,7 +12,10 @@
       <td><%= people.name %></td>
       <td><%= people.address %></td>
       <td><%= people.telephone %></td>
-      <td><%= people.group_id %></td>
+      <td><%= people.group.groupname %></td>
+       <td><%= link_to 'Delete', person_path(people), method: :delete, data: { confirm: 'Are you sure?'} %></td>
     </tr>
   <% end %>
 </table>
+<%= link_to 'Add New People', new_person_path %>
+<%= link_to 'Home', root_path %>

@@ -11,7 +11,8 @@
       <td><center><%= groups.id %></center></td>
       <td><center><%= groups.groupname %></center></td>
        <td><%= link_to 'Show', groups %></td>
-    </tr>
+      <td><%= link_to 'Destroy', group_path(groups),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
   <% end %>
 </table>
 <%= link_to 'Add New Group', new_group_path %>

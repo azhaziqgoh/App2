@@ -7,5 +7,21 @@
   <strong>Groupname:</strong>
   <%= @group.groupname %>
 </p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Telephone</th>
+  </tr>
+ 
+  <% @group.people.each do |person| %>
+    <tr>
+      <td><%= person.name %></td>
+      <td><%= person.address %></td>
+      <td><%= person.telephone %></td>
+    </tr>
+  <% end %>
+</table>
 <%= link_to 'Back to List', groups_path %>
  
